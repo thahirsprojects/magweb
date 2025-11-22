@@ -1,7 +1,10 @@
+import React from 'react';
 import { Target, Eye, Award, Users, Briefcase } from 'lucide-react';
 import { ImageWithFallback } from '../figma/ImageWithFallback';
 import { Card } from '../ui/card';
 import { Badge } from '../ui/badge';
+import mamPic from '../Assets/Mam-pic.jpg';
+import sirPic from '../Assets/Sir-pic.jpg';
 
 export default function About() {
   const values = [
@@ -31,14 +34,16 @@ export default function About() {
     {
       name: 'Sarah Mitchell',
       role: 'CEO & Founder',
-      image: 'https://images.unsplash.com/photo-1758518727888-ffa196002e59?w=600',
-      bio: 'With over 15 years of experience in corporate training and organizational development, Sarah founded MAG to revolutionize soft skills training for the modern workforce.',
+      image: mamPic,
+      bio:
+        'With over 15 years of experience in corporate training and organizational development, Sarah founded MAG to revolutionize soft skills training for the modern workforce.',
     },
     {
       name: 'David Anderson',
       role: 'Chief Training Officer',
-      image: 'https://images.unsplash.com/photo-1629507208649-70919ca33793?w=600',
-      bio: 'David brings 20 years of expertise in leadership development and has trained thousands of professionals across diverse industries globally.',
+      image: sirPic,
+      bio:
+        'David brings 20 years of expertise in leadership development and has trained thousands of professionals across diverse industries globally.',
     },
   ];
 
@@ -144,21 +149,27 @@ export default function About() {
             <h2 className="text-3xl md:text-4xl lg:text-5xl text-gray-900 mb-4">Meet Our Leadership</h2>
             <p className="text-lg md:text-xl text-gray-600">Experienced professionals dedicated to your success</p>
           </div>
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12 max-w-5xl mx-auto">
+
+          {/* grid: items-start makes all cards align to the top */}
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 max-w-5xl mx-auto items-start">
             {team.map((member, index) => (
               <Card
                 key={index}
-                className="bg-white rounded-3xl border-none shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden group cursor-pointer"
+                className="bg-white rounded-3xl border-none shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden group cursor-pointer flex flex-col h-full"
               >
-                <div className="relative overflow-hidden">
+                {/* image wrapper: relative so overlay can be absolute */}
+                <div className="relative w-full h-72 md:h-96 overflow-hidden">
+                  {/* If your ImageWithFallback forwards className to its <img>, this will apply correctly.
+                      If you find styling isn't applied, temporarily swap to <img src={member.image} ... /> to test. */}
                   <ImageWithFallback
                     src={member.image}
                     alt={member.name}
-                    className="w-full aspect-[4/5] object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-full object-cover block"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#2D5BFF]/90 via-[#2D5BFF]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-[#2D5BFF]/90 via-[#2D5BFF]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
-                <div className="p-8">
+
+                <div className="p-8 flex-grow">
                   <h3 className="text-2xl text-gray-900 mb-2">{member.name}</h3>
                   <p className="text-[#2D5BFF] mb-4">{member.role}</p>
                   <p className="text-gray-600 leading-relaxed">{member.bio}</p>
@@ -168,7 +179,6 @@ export default function About() {
           </div>
         </div>
       </section>
-
     </div>
   );
 }
