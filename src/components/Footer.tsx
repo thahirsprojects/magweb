@@ -51,15 +51,15 @@ export default function Footer() {
             <ul className="space-y-3 text-sm">
               <li className="flex items-center gap-2">
                 <Mail size={16} className="text-[#2D5BFF]" />
-                <span>info@mag.com</span>
+                <span>info@magresourcerevolution .com</span>
               </li>
               <li className="flex items-center gap-2">
                 <Phone size={16} className="text-[#2D5BFF]" />
-                <span>+91 98765 43210</span>
+                <span>+91 78680 23276</span>
               </li>
               <li className="flex items-start gap-2">
                 <MapPin size={16} className="text-[#2D5BFF] mt-1" />
-                <span>Cuddalore, Pondicherry, India</span>
+                <span>VQ7P+WPQ, Thavalakuppam, Puducherry 605007, India</span>
               </li>
             </ul>
           </div>
@@ -69,7 +69,7 @@ export default function Footer() {
             <h4 className="text-white mb-4">Follow Us</h4>
             <div className="flex gap-4">
               <a
-                href="#"
+                href="https://www.facebook.com/people/Mag-Resource-Revolution/61575093089959/?mibextid=wwXIfr&rdid=oxQnAfp8j9HmJXiT&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F19c8HvsZEK%2F%3Fmibextid%3DwwXIfr"
                 className="bg-gray-800 p-2 rounded-full hover:bg-[#2D5BFF] transition-all duration-300 hover:scale-110"
               >
                 <Facebook size={20} />
@@ -87,7 +87,7 @@ export default function Footer() {
                 <Linkedin size={20} />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/mag_resource_revolution/?igsh=aXJwNnZreDgxY2Rv&utm_source=qr#"
                 className="bg-gray-800 p-2 rounded-full hover:bg-[#2D5BFF] transition-all duration-300 hover:scale-110"
               >
                 <Instagram size={20} />

@@ -150,7 +150,7 @@ export default function Home({ onNavigate }: HomeProps) {
           </div>
           <div className="text-center mt-8">
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/mag_resource_revolution/?igsh=aXJwNnZreDgxY2Rv&utm_source=qr#"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-[#2D5BFF] hover:text-[#1E40CC] transition-colors duration-300"

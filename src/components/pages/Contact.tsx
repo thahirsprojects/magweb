@@ -40,26 +40,26 @@ export default function Contact() {
     {
       icon: <Mail className="w-6 h-6" />,
       title: 'Email Us',
-      detail: 'info@mag.com',
-      link: 'mailto:info@mag.com',
+      detail: 'info@magresourcerevolution .com',
+      link: 'mailto:info@magresourcerevolution.com',
     },
     {
       icon: <Phone className="w-6 h-6" />,
       title: 'Call Us',
-      detail: '+91 98765 43210',
+      detail: '+91 78680 23276',
       link: 'tel:+919876543210',
     },
     {
       icon: <Clock className="w-6 h-6" />,
       title: 'Business Hours',
-      detail: 'Mon-Fri: 9:00 AM - 6:00 PM',
+      detail: 'Monday - Friday 8am - 6pm  Saturday 8am - 2pm',
       link: '#',
     },
     {
       icon: <MapPin className="w-6 h-6" />,
       title: 'Visit Us',
-      detail: 'Cuddalore, Pondicherry, India',
-      link: '#',
+      detail: 'VQ7P+WPQ, Thavalakuppam, Puducherry 605007, India',
+      link: 'https://maps.app.goo.gl/gjDg7A2Mk7SP9Qhc8',
     },
   ];
 
