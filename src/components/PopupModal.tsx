@@ -52,7 +52,7 @@ export default function PopupModal({ onNavigate }: PopupModalProps) {
         {/* Close Button */}
         <button
           onClick={handleClose}
-          className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors duration-200 hover:rotate-90 transform transition-transform"
+          className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors duration-200 hover:rotate-90 transform"
           aria-label="Close modal"
         >
           <X className="w-6 h-6" />
