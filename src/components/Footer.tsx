@@ -2,52 +2,36 @@ import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'luc
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-300 rounded-t-4xl">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <div className="bg-gray-200 rounded-t-4xl overflow-hidden mt-16">
+      <footer className="bg-gray-900 text-gray-300 px-8 md:px-16 py-14">
+
+        {/* Top Footer Grid */}
+        <div className="grid md:grid-cols-4 gap-12 max-w-7xl mx-auto">
+
           {/* Company Info */}
           <div>
-            <h3 className="text-white text-xl mb-4">MAGRR</h3>
-            <p className="text-sm mb-4">
-              Empowering industries and universities with essential soft skills training for success in the modern world.
+            <h3 className="text-white text-2xl font-semibold mb-4">MAGRR</h3>
+            <p className="leading-relaxed text-sm">
+              Empowering industries and universities with essential soft skills
+              training for success in the modern world.
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-white mb-4">Quick Links</h4>
+            <h4 className="text-white text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2 text-sm">
-              <li>
-                <a href="#" className="hover:text-[#2D5BFF] transition-colors duration-300">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-[#2D5BFF] transition-colors duration-300">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-[#2D5BFF] transition-colors duration-300">
-                  Services
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-[#2D5BFF] transition-colors duration-300">
-                  Clients
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-[#2D5BFF] transition-colors duration-300">
-                  Contact
-                </a>
-              </li>
+              <li><a href="#" className="hover:text-[#2D5BFF] transition">Home</a></li>
+              <li><a href="#" className="hover:text-[#2D5BFF] transition">About Us</a></li>
+              <li><a href="#" className="hover:text-[#2D5BFF] transition">Services</a></li>
+              <li><a href="#" className="hover:text-[#2D5BFF] transition">Clients</a></li>
+              <li><a href="#" className="hover:text-[#2D5BFF] transition">Contact</a></li>
             </ul>
           </div>
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-white mb-4">Contact Us</h4>
+            <h4 className="text-white text-lg font-semibold mb-4">Contact Us</h4>
             <ul className="space-y-3 text-sm">
               <li className="flex items-center gap-2">
                 <Mail size={16} className="text-[#2D5BFF]" />
@@ -66,7 +50,7 @@ export default function Footer() {
 
           {/* Social Media */}
           <div>
-            <h4 className="text-white mb-4">Follow Us</h4>
+            <h4 className="text-white text-lg font-semibold mb-4">Follow Us</h4>
             <div className="flex gap-4">
               <a
                 href="https://www.facebook.com/people/Mag-Resource-Revolution/61575093089959/?mibextid=wwXIfr&rdid=oxQnAfp8j9HmJXiT&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F19c8HvsZEK%2F%3Fmibextid%3DwwXIfr"
@@ -94,12 +78,16 @@ export default function Footer() {
               </a>
             </div>
           </div>
+
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm">
-          <p>&copy; 2025 MAGRR. All rights reserved.</p>
+        {/* Bottom Bar */}
+        <div className="border-t border-gray-800 mt-10 pt-6 text-center text-sm">
+          <p>© 2025 MAGRR. All rights reserved.</p>
         </div>
-      </div>
-    </footer>
+
+      </footer>
+    </div>
   );
 }
+
