@@ -69,13 +69,13 @@ export default function PopupModal({ onNavigate }: PopupModalProps) {
 
           {/* Headline */}
           <h2 className="text-3xl md:text-4xl text-gray-900">
-            Ready to Transform Your Team?
+           Ready to elevate your team 
           </h2>
 
           {/* Description */}
           <p className="text-lg text-gray-600 leading-relaxed">
-            Book a free consultation with our experts or connect with us instantly on WhatsApp. 
-            Let's discuss how MAGRR can elevate your team's soft skills.
+           Speak with our training and workforce experts or reach us instantly on WhatsApp. Together,
+            we’ll identify the right solutions for your teams and learners. 
           </p>
 
           {/* Buttons */}

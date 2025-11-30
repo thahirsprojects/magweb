@@ -126,7 +126,7 @@ export default function Services({ onNavigate }: ServicesProps) {
     <div className="min-h-screen pt-16 md:pt-20 bg-white">
       {/* Hero Section */}
       <section className="relative py-20 md:py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#2D5BFF]/5 via-white to-[#2D5BFF]/5"></div>
+        <div className="absolute inset-0 bg-linear-to-br from-[#2D5BFF]/5 via-white to-[#2D5BFF]/5"></div>
         <div className="max-w-7xl mx-auto relative">
           <div className="text-center">
             <Badge className="mb-6 bg-[#2D5BFF]/10 text-[#2D5BFF] hover:bg-[#2D5BFF]/20 px-4 py-2 border-none">
@@ -170,10 +170,10 @@ export default function Services({ onNavigate }: ServicesProps) {
                   </Badge>
                 </div>
                 <p className="text-gray-600 mb-6">{service.description}</p>
-                <div className="space-y-3 mb-6 flex-grow">
+                <div className="space-y-3 mb-6 grow">
                   {service.features.map((feature, idx) => (
                     <div key={idx} className="flex items-start gap-2">
-                      <Check className="w-5 h-5 text-[#2D5BFF] flex-shrink-0 mt-0.5" />
+                      <Check className="w-5 h-5 text-[#2D5BFF] shrink-0 mt-0.5" />
                       <span className="text-gray-700">{feature}</span>
                     </div>
                   ))}
@@ -252,7 +252,7 @@ export default function Services({ onNavigate }: ServicesProps) {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#2D5BFF] to-[#1E40CC]">
+      <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-linear-to-br from-[#2D5BFF] to-[#1E40CC]">
         <div className="max-w-4xl mx-auto text-center text-white">
           <h2 className="text-3xl md:text-4xl lg:text-5xl mb-6">
             Ready to Get Started?

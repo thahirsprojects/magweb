@@ -50,7 +50,7 @@ export default function About() {
   return (
     <div className="min-h-screen pt-16 md:pt-20">
       {/* Hero Section */}
-      <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#2D5BFF]/5 to-white">
+      <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-linear-to-br from-[#2D5BFF]/5 to-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl lg:text-6xl text-gray-900 mb-6">
@@ -166,10 +166,10 @@ export default function About() {
                     alt={member.name}
                     className="w-full h-full object-cover block"
                   />
-                  <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-[#2D5BFF]/90 via-[#2D5BFF]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 pointer-events-none bg-linear-to-t from-[#2D5BFF]/90 via-[#2D5BFF]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
 
-                <div className="p-8 flex-grow">
+                <div className="p-8 grow">
                   <h3 className="text-2xl text-gray-900 mb-2">{member.name}</h3>
                   <p className="text-[#2D5BFF] mb-4">{member.role}</p>
                   <p className="text-gray-600 leading-relaxed">{member.bio}</p>
