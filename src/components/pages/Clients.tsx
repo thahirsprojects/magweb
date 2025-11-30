@@ -206,7 +206,7 @@ export default function Clients({ onNavigate }: ClientsProps) {
     <div className="min-h-screen pt-16 md:pt-20 bg-white">
       {/* Hero Section */}
       <section className="relative py-20 md:py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#2D5BFF]/5 via-white to-[#2D5BFF]/5"></div>
+        <div className="absolute inset-0 bg-linear-to-br from-[#2D5BFF]/5 via-white to-[#2D5BFF]/5"></div>
         <div className="max-w-7xl mx-auto relative">
           <div className="text-center mb-12">
             <Badge className="mb-6 bg-[#2D5BFF]/10 text-[#2D5BFF] hover:bg-[#2D5BFF]/20 px-4 py-2 border-none">
@@ -303,7 +303,7 @@ export default function Clients({ onNavigate }: ClientsProps) {
                 
                 <div className="aspect-square flex items-center justify-center">
                   <div className="relative w-full h-full">
-                    <div className="absolute inset-0 bg-gradient-to-br from-[#2D5BFF]/0 to-[#2D5BFF]/0 group-hover:from-[#2D5BFF]/5 group-hover:to-[#2D5BFF]/10 rounded-xl transition-all duration-300"></div>
+                    <div className="absolute inset-0 bg-linear-to-br from-[#2D5BFF]/0 to-[#2D5BFF]/0 group-hover:from-[#2D5BFF]/5 group-hover:to-[#2D5BFF]/10 rounded-xl transition-all duration-300"></div>
                     <div className="relative flex items-center justify-center h-full group-hover:scale-110 transition-transform duration-300">
                       <Building2 className="w-12 h-12 text-gray-300 group-hover:text-[#2D5BFF] transition-colors duration-300" />
                     </div>
@@ -386,7 +386,7 @@ export default function Clients({ onNavigate }: ClientsProps) {
                         <ul className="space-y-2">
                           {study.results.map((result, idx) => (
                             <li key={idx} className="flex items-start gap-3">
-                              <CheckCircle className="w-5 h-5 text-[#2D5BFF] flex-shrink-0 mt-0.5" />
+                              <CheckCircle className="w-5 h-5 text-[#2D5BFF] shrink-0 mt-0.5" />
                               <span className="text-gray-700">{result}</span>
                             </li>
                           ))}
@@ -429,7 +429,7 @@ export default function Clients({ onNavigate }: ClientsProps) {
                 </div>
                 <p className="text-gray-700 mb-6 italic leading-relaxed">"{testimonial.quote}"</p>
                 <div className="flex items-center gap-4 pt-6 border-t border-gray-100">
-                  <div className="w-14 h-14 rounded-full overflow-hidden flex-shrink-0">
+                  <div className="w-14 h-14 rounded-full overflow-hidden shrink-0">
                     <ImageWithFallback
                       src={testimonial.image}
                       alt={testimonial.name}
@@ -465,7 +465,7 @@ export default function Clients({ onNavigate }: ClientsProps) {
                 key={index}
                 className="p-8 bg-white rounded-2xl border-none shadow-lg hover:shadow-[0_20px_60px_-15px_rgba(45,91,255,0.3)] hover:-translate-y-2 transition-all duration-300"
               >
-                <div className="bg-gradient-to-br from-[#2D5BFF]/10 to-[#2D5BFF]/5 w-14 h-14 rounded-2xl flex items-center justify-center text-[#2D5BFF] mb-4">
+                <div className="bg-linear-to-br from-[#2D5BFF]/10 to-[#2D5BFF]/5 w-14 h-14 rounded-2xl flex items-center justify-center text-[#2D5BFF] mb-4">
                   {benefit.icon}
                 </div>
                 <h3 className="text-xl text-gray-900 mb-3">{benefit.title}</h3>
@@ -477,7 +477,7 @@ export default function Clients({ onNavigate }: ClientsProps) {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#2D5BFF] to-[#1E40CC]">
+      <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-linear-to-br from-[#2D5BFF] to-[#1E40CC]">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl text-white mb-6">
             Ready to Transform Your Organization?
