@@ -109,7 +109,7 @@ export default function Home({ onNavigate }: HomeProps) {
             {features.map((feature, index) => (
               <Card
                 key={index}
-                className="p-6 md:p-8 bg-white rounded-2xl border-none shadow-md  hover:-translate-y-2 transition-all duration-300 cursor-pointer  hover:shadow-blue-300"
+                className="p-6 md:p-8 bg-white rounded-2xl  shadow-md border-gray-100 hover:border-[#2D5BFF] hover:-translate-y-2 transition-all duration-300 cursor-pointer  hover:shadow-blue-300"
               >
                 <div className="bg-[#2D5BFF]/10 w-16 h-16 rounded-xl flex items-center justify-center text-[#2D5BFF] mb-4">
                   {feature.icon}

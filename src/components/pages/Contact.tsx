@@ -84,7 +84,7 @@ export default function Contact() {
             {contactInfo.map((info, index) => (
               <Card
                 key={index}
-                className="p-6 bg-white rounded-2xl border-none shadow-lg  hover:-translate-y-2 transition-all duration-300  hover:shadow-blue-300"
+                className="p-6 bg-white rounded-2xl border-gray-100 hover:border-[#2D5BFF] shadow-lg  hover:-translate-y-2 transition-all duration-300  hover:shadow-blue-300"
               >
                 <div className="bg-[#2D5BFF]/10 w-14 h-14 rounded-xl flex items-center justify-center text-[#2D5BFF] mb-4">
                   {info.icon}
@@ -198,7 +198,7 @@ export default function Contact() {
 
             {/* Map / Additional Info */}
             <div className="space-y-8">
-              <Card className="p-8 bg-white rounded-3xl border-none shadow-lg">
+              <Card className="p-8 bg-white rounded-3xl border-gray-100 hover:border-[#2D5BFF] shadow-lg">
                 <h3 className="text-2xl text-gray-900 mb-4">Why Choose Us?</h3>
                 <ul className="space-y-4 text-gray-600">
                   <li className="flex items-start gap-3">

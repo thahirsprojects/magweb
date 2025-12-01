@@ -149,7 +149,7 @@ export default function Services({ onNavigate }: ServicesProps) {
             {services.map((service, index) => (
               <Card
                 key={index}
-                className="group p-8 bg-white rounded-3xl border-none shadow-lg hover:shadow-blue-300 hover:-translate-y-2 transition-all duration-300 relative overflow-hidden flex flex-col"
+                className="p-8 bg-white rounded-3xl border-gray-100 hover:border-[#2D5BFF] shadow-lg hover:shadow-blue-300 hover:-translate-y-2 transition-all duration-300 relative overflow-hidden flex flex-col"
               >
                 {service.popular && (
                   <Badge className="absolute top-6 right-6 bg-[#2D5BFF] text-white px-3 py-1 rounded-full">
