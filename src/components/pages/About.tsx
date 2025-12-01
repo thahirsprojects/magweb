@@ -96,7 +96,7 @@ export default function About() {
       <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12">
-            <Card className="p-8 md:p-12 bg-white rounded-3xl border-none shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+            <Card className="p-8 md:p-12 bg-white rounded-3xl border-none shadow-lg hover:shadow-blue-300 hover:-translate-y-2 transition-all duration-300">
               <div className="bg-[#2D5BFF]/10 w-16 h-16 rounded-2xl flex items-center justify-center text-[#2D5BFF] mb-6">
                 <Target className="w-8 h-8" />
               </div>
@@ -105,7 +105,7 @@ export default function About() {
                 To empower individuals and organizations with essential soft skills that drive professional excellence, foster collaboration, and create lasting positive impact in the workplace.
               </p>
             </Card>
-            <Card className="p-8 md:p-12 bg-white rounded-3xl border-none shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+            <Card className="p-8 md:p-12 bg-white rounded-3xl border-none shadow-lg hover:shadow-blue-300 hover:-translate-y-2 transition-all duration-300">
               <div className="bg-[#2D5BFF]/10 w-16 h-16 rounded-2xl flex items-center justify-center text-[#2D5BFF] mb-6">
                 <Eye className="w-8 h-8" />
               </div>
@@ -129,7 +129,7 @@ export default function About() {
             {values.map((value, index) => (
               <Card
                 key={index}
-                className="p-6 md:p-8 bg-white rounded-2xl border-2 border-gray-100 hover:border-[#2D5BFF] shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
+                className="p-6 md:p-8 bg-white rounded-2xl border-2 border-gray-100 hover:border-[#2D5BFF] shadow-md hover:shadow-blue-300 hover:-translate-y-2 transition-all duration-300"
               >
                 <div className="bg-[#2D5BFF]/10 w-12 h-12 rounded-xl flex items-center justify-center text-[#2D5BFF] mb-4">
                   {value.icon}
