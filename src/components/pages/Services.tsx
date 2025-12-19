@@ -204,65 +204,7 @@ export default function Services({ onNavigate }: ServicesProps) {
       </section>
 
       
-      <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl text-gray-900 mb-4">
-              Custom Solutions
-            </h2>
-            <p className="text-lg md:text-xl text-gray-600">
-              We also offer tailored services to meet your specific needs
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6 md:gap-8">
-            {customSolutions.map((solution, index) => (
-             <Card
-  key={index}
-  className="group p-8 bg-white rounded-3xl border-none shadow-lg hover:shadow-blue-300 hover:-translate-y-2 transition-all duration-300 relative overflow-hidden flex flex-col"
->
-                <h3 className="text-xl text-gray-900 mb-3">{solution.title}</h3>
-                <p className="text-gray-600">{solution.description}</p>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       
-      <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl text-gray-900 mb-4">
-              Our Service Process
-            </h2>
-            <p className="text-lg md:text-xl text-gray-600">
-              A proven methodology for maximum impact
-            </p>
-          </div>
-          <div className="grid md:grid-cols-4 gap-8">
-            {[
-              { step: '01', title: 'Discovery', description: 'We understand your unique needs and goals' },
-              { step: '02', title: 'Strategy', description: 'Custom solution development for your objectives' },
-              { step: '03', title: 'Implementation', description: 'Expert delivery with measurable outcomes' },
-              { step: '04', title: 'Support', description: 'Ongoing engagement and continuous improvement' },
-            ].map((item, index) => (
-              <div key={index} className="relative text-center group">
-                <div className="bg-[#2D5BFF]/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-[#2D5BFF] transition-colors duration-300">
-                  <span className="text-2xl text-[#2D5BFF] group-hover:text-white transition-colors duration-300">
-                    {item.step}
-                  </span>
-                </div>
-                <h3 className="text-xl text-gray-900 mb-2">{item.title}</h3>
-                <p className="text-gray-600">{item.description}</p>
-                {index < 3 && (
-                  <ArrowRight className="hidden md:block absolute top-8 -right-4 text-gray-300 w-8 h-8" />
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
     </div>
   );
 }
