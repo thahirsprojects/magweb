@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+import { Mail, Phone, MapPin, Facebook, Youtube, Linkedin, Instagram } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -59,13 +59,13 @@ export default function Footer() {
                 <Facebook size={20} />
               </a>
               <a
-                href="#"
+                href="https://www.youtube.com/channel/UCeoqPQv2LAEkNMEVzrmLUCg"
                 className="bg-gray-800 p-2 rounded-full hover:bg-[#2D5BFF] transition-all duration-300 hover:scale-110"
               >
-                <Twitter size={20} />
+                <Youtube size={20} />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/company/mag-resources-revolution/"
                 className="bg-gray-800 p-2 rounded-full hover:bg-[#2D5BFF] transition-all duration-300 hover:scale-110"
               >
                 <Linkedin size={20} />
