@@ -1,8 +1,11 @@
 import { ArrowRight, Users, Target, Award, TrendingUp, Instagram } from 'lucide-react';
-import { ImageWithFallback } from '../figma/ImageWithFallback';
+
 import { Button } from '../ui/button';
 import { Card } from '../ui/card';
-
+import img1 from '../../assets/img1.JPG';
+import img2 from '../../assets/img2.JPG';
+import img3 from '../../assets/img3.JPG';
+import img4 from '../../assets/img4.JPG';
 
 interface HomeProps {
   onNavigate: (page: string) => void;
@@ -33,10 +36,10 @@ export default function Home({ onNavigate }: HomeProps) {
   ];
 
   const instagramPosts = [
-    { id: 1, image: 'magweb/src/assets/instagram-pic1.JPG' },
-    { id: 2, image: 'https://images.unsplash.com/photo-1690264421892-46e3af5c3455?w=400' },
-    { id: 3, image: 'https://images.unsplash.com/photo-1761250246894-ee2314939662?w=400' },
-    { id: 4, image: 'https://images.unsplash.com/photo-1758270704534-fd9715bffc0e?w=400' },
+    { id: 1, image: img1 },
+    { id: 2, image: img2 },
+    { id: 3, image: img3 },
+    { id: 4, image: img4 },
   ];
 
   return (
@@ -72,7 +75,7 @@ export default function Home({ onNavigate }: HomeProps) {
             </div>
             <div className="relative">
               <div className="rounded-3xl overflow-hidden shadow-2xl">
-                <ImageWithFallback
+                <img
                   src="https://images.unsplash.com/photo-1758691736067-b309ee3ef7b9?w=800"
                   alt="Professional training session"
                   className="w-full h-auto"
@@ -157,7 +160,7 @@ export default function Home({ onNavigate }: HomeProps) {
                 key={post.id}
                 className="relative rounded-2xl overflow-hidden group cursor-pointer shadow-md hover:shadow-2xl hover:scale-105 transition-all duration-300"
               >
-                <ImageWithFallback
+                <img 
                   src={post.image}
                   alt={`Instagram post ${post.id}`}
                   className="w-full aspect-square object-cover"

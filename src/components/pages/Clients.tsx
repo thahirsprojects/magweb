@@ -1,6 +1,6 @@
 import { useState, useMemo } from 'react';
 import { Building2, GraduationCap, Award, Users, CheckCircle, Star, Quote, Factory, Laptop, Briefcase, BookOpen as BookIcon, Hospital, Search, TrendingUp, Target, Zap } from 'lucide-react';
-import { ImageWithFallback } from '../figma/ImageWithFallback';
+
 import { Card } from '../ui/card';
 import { Button } from '../ui/button';
 import { Badge } from '../ui/badge';
@@ -361,7 +361,7 @@ export default function Clients({ onNavigate }: ClientsProps) {
               >
                 <div className={`grid lg:grid-cols-2 gap-0 ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
                   <div className={`${index % 2 === 1 ? 'lg:order-2' : ''}`}>
-                    <ImageWithFallback
+                    <img
                       src={study.image}
                       alt={study.company}
                       className="w-full h-64 lg:h-full object-cover"
@@ -430,7 +430,7 @@ export default function Clients({ onNavigate }: ClientsProps) {
                 <p className="text-gray-700 mb-6 italic leading-relaxed">"{testimonial.quote}"</p>
                 <div className="flex items-center gap-4 pt-6 border-t border-gray-100">
                   <div className="w-14 h-14 rounded-full overflow-hidden shrink-0">
-                    <ImageWithFallback
+                    <img
                       src={testimonial.image}
                       alt={testimonial.name}
                       className="w-full h-full object-cover"
