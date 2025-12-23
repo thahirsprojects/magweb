@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+{/* import { useState, useMemo } from 'react';
 import { Building2, GraduationCap, Award, Users, CheckCircle, Star, Quote, Factory, Laptop, Briefcase, BookOpen as BookIcon, Hospital, Search, TrendingUp, Target, Zap } from 'lucide-react';
 
 import { Card } from '../ui/card';
@@ -204,7 +204,7 @@ export default function Clients({ onNavigate }: ClientsProps) {
 
   return (
     <div className="min-h-screen pt-16 md:pt-20 bg-white">
-      {/* Hero Section */}
+      {/* Hero Section }
       
       
         <div className="max-w-7xl mx-auto relative">
@@ -238,11 +238,11 @@ export default function Clients({ onNavigate }: ClientsProps) {
                 </div>
               </Card>
             ))}
-          </div>*/}
+          </div>}
         </div>
       
 
-      {/* Client Portfolio Section with Filters */}
+      {/* Client Portfolio Section with Filters }
      {/* <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
@@ -337,9 +337,9 @@ export default function Clients({ onNavigate }: ClientsProps) {
             </div>
           )}
         </div>
-      </section> */}
+      </section> }
 
-      {/* Featured Case Studies */}
+      {/* Featured Case Studies }
       <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 md:mb-16">
@@ -401,7 +401,7 @@ export default function Clients({ onNavigate }: ClientsProps) {
         </div>
       </section> 
 
-      {/* Client Testimonials */}
+      {/* Client Testimonials }
       <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 md:mb-16">
@@ -448,7 +448,7 @@ export default function Clients({ onNavigate }: ClientsProps) {
         </div>
       </section>
 
-      {/* Why Organizations Choose MAGRR */}
+      {/* Why Organizations Choose MAGRR }
       <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 md:mb-16">
@@ -478,4 +478,4 @@ export default function Clients({ onNavigate }: ClientsProps) {
 
     </div>
   );
-}
+     } */}

@@ -18,7 +18,7 @@ export default function Navbar({ currentPage, onNavigate }: NavbarProps) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navItems = ['Home', 'About', 'Services', 'Clients', 'Contact'];
+  const navItems = ['Home', 'About', 'Services', 'Contact'];
 
   return (
     <nav

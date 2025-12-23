@@ -33,9 +33,9 @@ export default function Footer({ onNavigate }: FooterProps) {
               <li>
            <button onClick={() => onNavigate("Services")} className="hover:text-[#2D5BFF] transition">  Services</button>
              </li>
-              <li>
+             {/*<li>
            <button onClick={() => onNavigate("Clients")} className="hover:text-[#2D5BFF] transition"> Clients </button>
-              </li>
+              </li>*/}
                <li>
            <button onClick={() => onNavigate("Contact")} className="hover:text-[#2D5BFF] transition"> Contact</button>
               </li>

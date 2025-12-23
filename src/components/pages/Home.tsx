@@ -6,7 +6,7 @@ import img1 from '../../assets/img1.JPG';
 import img2 from '../../assets/img2.JPG';
 import img3 from '../../assets/img3.JPG';
 import img4 from '../../assets/img4.JPG';
-
+import img6 from '../../assets/img6.JPG';
 interface HomeProps {
   onNavigate: (page: string) => void;
 }
@@ -40,6 +40,7 @@ export default function Home({ onNavigate }: HomeProps) {
     { id: 2, image: img2 },
     { id: 3, image: img3 },
     { id: 4, image: img4 },
+    
   ];
 
   return (
@@ -76,7 +77,7 @@ export default function Home({ onNavigate }: HomeProps) {
             <div className="relative">
               <div className="rounded-3xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1758691736067-b309ee3ef7b9?w=800"
+                  src={img6}
                   alt="Professional training session"
                   className="w-full h-auto"
                 />
