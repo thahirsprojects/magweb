@@ -50,7 +50,7 @@ export default function Home({ onNavigate }: HomeProps) {
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6 md:space-y-8">
-             <h1 className="text-4xl md:text-5xl lg:text-6xl text-gray-900">
+             <h1 className="text-4xl font-semibold md:text-5xl lg:text-6xl text-gray-900">
   Nurturing <br/>the <span className="text-[#2D5BFF]">leaders</span> of tomorrow
 </h1>
 

@@ -146,7 +146,7 @@ ${name}
       {/* Hero Section */}
       <section className='py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-linear-to-br from-[#2D5BFF]/5 to-white'>
         <div className='max-w-7xl mx-auto text-center'>
-          <h1 className='text-4xl md:text-5xl lg:text-6xl text-gray-900 mb-6'>
+          <h1 className='text-4xl font-semibold md:text-5xl lg:text-6xl text-gray-900 mb-6'>
             Let’s get <span className='text-[#2D5BFF]'>connected</span>
           </h1>
           <p className='text-lg md:text-xl text-gray-600 max-w-3xl mx-auto'>
