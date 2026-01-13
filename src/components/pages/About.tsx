@@ -1,6 +1,6 @@
 import React from 'react';
 import { Target, Eye, Award, Users, Briefcase } from 'lucide-react';
-import { ImageWithFallback } from '../figma/ImageWithFallback';
+import img7 from '../../assets/img7.jpg';
 import { Card } from '../ui/card';
 import { Badge } from '../ui/badge';
 import mamPic from '../../assets/Mam-pic.jpg';
@@ -82,8 +82,8 @@ export default function About() {
               </div>
             </div>
             <div className="rounded-3xl overflow-hidden shadow-2xl">
-              <ImageWithFallback
-                src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800"
+              <img 
+                src={img7}
                 alt="MAGRR office"
                 className="w-full h-auto"
               />
