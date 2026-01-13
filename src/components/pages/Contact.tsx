@@ -81,11 +81,11 @@ ${name}
       toEmail
     )}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
-    // ✅ MOBILE FIX (ONLY ADDITION)
+    // MOBILE FIX 
     const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 
     if (isMobile) {
-      // 📱 Mobile → open mail app
+      // Mobile → open mail app
       const mailtoURL = `mailto:${toEmail}?subject=${encodeURIComponent(
         subject
       )}&body=${encodeURIComponent(body)}`;
