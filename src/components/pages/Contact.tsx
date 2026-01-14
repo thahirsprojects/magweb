@@ -92,7 +92,7 @@ ${name}
 
       window.location.href = mailtoURL;
     } else {
-      // 💻 Desktop → Gmail web (your original logic)
+      // Desktop → Gmail web (your original logic)
       const gmailWindow = window.open(gmailURL, "_blank");
 
       if (!gmailWindow) {
