@@ -5,6 +5,9 @@ import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
 import { Card } from "../ui/card";
 
+
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
@@ -13,6 +16,8 @@ export default function Contact() {
     phone: "",
     message: "",
   });
+const [emailError, setEmailError] = useState('');
+const [checkingEmail, setCheckingEmail] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -49,9 +54,41 @@ export default function Contact() {
     }
   };
 
+  const checkEmailExists = async (email: string) => {
+  try {
+    const res = await fetch('http://localhost:5000/api/auth/check-email', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email }),
+    });
+
+    const data = await res.json();
+    return data.exists === true;
+  } catch (error) {
+    console.error('Email check failed', error);
+    return false;
+  }
+};
+
+const handleEmailBlur = async () => {
+  if (!emailRegex.test(formData.email)) {
+    setEmailError('Invalid email format');
+    return;
+  }
+
+  setCheckingEmail(true);
+  const exists = await checkEmailExists(formData.email);
+  setCheckingEmail(false);
+
+  setEmailError(exists ? 'Email already exists' : '');
+};
+
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-
+  if (emailError) {
+    return;
+  }
     const { name, email, organization, phone, message } = formData;
 
     const toEmail = "thahirsprojects@gmail.com";
@@ -232,6 +269,15 @@ ${name}
                     className="w-full px-4 py-3 rounded-xl border-gray-300 focus:border-[#2D5BFF] focus:ring-[#2D5BFF]"
                     placeholder="name@example.com"
                   />
+                  {checkingEmail && (
+                 <p className='text-sm text-gray-500 mt-1'>Checking email...</p>
+                 )}
+
+                  {emailError && (
+                  <p className='text-sm text-red-500 mt-1'>{emailError}</p>
+                 )}
+                 
+
                 </div>
                 <div>
                   <label

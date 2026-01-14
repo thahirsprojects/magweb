@@ -1,16 +1,12 @@
-import {
-  Check,
-  ArrowRight,
-  Users,
-  BookOpen,
-  MessageSquare,
-  Globe,
-  Briefcase,
-  GraduationCap,
-} from "lucide-react";
+
 import { Card } from "../ui/card";
 import { Badge } from "../ui/badge";
-
+import ser1 from '../../assets/ser1.JPG';
+import ser3 from '../../assets/ser3.png';
+import ser7 from '../../assets/ser7.PNG';
+import ser9 from '../../assets/ser9.PNG';
+import ser10 from '../../assets/ser10.jpg';
+import ser11 from '../../assets/ser11.PNG';
 interface ServicesProps {
   onNavigate: (page: string) => void;
 }
@@ -18,7 +14,7 @@ interface ServicesProps {
 export default function Services({ onNavigate }: ServicesProps) {
   const services = [
     {
-      icon: <Users className="w-6 h-6" />,
+      image: ser1,
       category: "Talent Acquisition ",
       title: "Recruitment Consultation",
       duration: "Flexible",
@@ -29,7 +25,7 @@ export default function Services({ onNavigate }: ServicesProps) {
       popular: true,
     },
     {
-      icon: <BookOpen className="w-6 h-6" />,
+      image: ser3,
       category: "Professional Development",
       title: "Upskilling Resources",
       duration: "Ongoing",
@@ -40,7 +36,7 @@ export default function Services({ onNavigate }: ServicesProps) {
       popular: false,
     },
     {
-      icon: <MessageSquare className="w-6 h-6" />,
+      image: ser7,
       category: "Core Training",
       title: "Soft Skills Training",
       duration: "Customized",
@@ -51,7 +47,7 @@ export default function Services({ onNavigate }: ServicesProps) {
       popular: true,
     },
     {
-      icon: <Globe className="w-6 h-6" />,
+      image: ser9,
       category: "International Expansion",
       title: "Globalization Services",
       duration: "Customized",
@@ -62,7 +58,7 @@ export default function Services({ onNavigate }: ServicesProps) {
       popular: false,
     },
     {
-      icon: <Briefcase className="w-6 h-6" />,
+      image: ser10,
       category: "Individual Development",
       title: "Career Coaching",
       duration: "Customized",
@@ -73,7 +69,7 @@ export default function Services({ onNavigate }: ServicesProps) {
       popular: false,
     },
     {
-      icon: <GraduationCap className="w-6 h-6" />,
+      image: ser11,
       category: "Student Success",
       title: "Early Career Guidance",
       duration: "Customized",
@@ -117,18 +113,26 @@ export default function Services({ onNavigate }: ServicesProps) {
           </div>
         </div>
       </section>
-
+      
       <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-8">
             {services.map((service, index) => (
               <Card
                 key={index}
-                className="group p-5 bg-white rounded-2xl  shadow-md border-gray-100 hover:border-[#2D5BFF] hover:-translate-y-2 transition-all duration-300 cursor-pointer  hover:shadow-blue-300"
-              >
-                <div className="bg-[#2D5BFF]/10 w-14 h-10 rounded-xl flex items-center justify-center text-[#2D5BFF] mb-4">
-                  {service.icon}
-                </div>
+                className="group p-5 bg-white rounded-2xl  shadow-md border-gray-100 hover:border-[#2D5BFF] hover:-translate-y-2 transition-all duration-300 cursor-pointer  hover:shadow-blue-300">
+              
+                
+      <div className="relative w-70 h-70 overflow-hidden rounded-t-2xl">
+  <img
+    src={service.image}
+    alt={service.title}
+    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+  />
+</div>
+
+
+               
                 <p className="text-sm text-[#2D5BFF] mb-2 p-[5px] ">
                   {service.category}
                 </p>
