@@ -54,7 +54,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h1 className="text-4xl font-semibold md:text-5xl lg:text-6xl text-gray-900 mb-6">
-              About <span className="text-[#2D5BFF]">MAGRR</span>
+              <span className="text-[#2D5BFF]">Mag Resource Revolution</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
               We are dedicated to empowering individuals and organizations through transformative soft skills training that drives real-world success.
@@ -71,7 +71,7 @@ export default function About() {
               <h2 className="text-3xl md:text-4xl text-gray-900 mb-6">About Us</h2>
               <div className="space-y-4 text-gray-600">
                 <p>
-                  MAGRR emerged from a simple yet powerful vision: to bridge the gap between academic knowledge and essential soft skills required in the professional world.
+                  Mag Resouce Revolution emerged from a simple yet powerful vision: to bridge the gap between academic knowledge and essential soft skills required in the professional world.
                 </p>
                 <p>
                   Mag Resource Revolution is a leading provider of Human Resource Training, Talent Acquisition, and Placement Services. We bridge the gap between talent and opportunity by empowering students, institutions, and organizations through high-quality training, global recruitment expertise, and industry-specific hiring solutions.
