@@ -9,7 +9,6 @@ import {
   GraduationCap,
 } from "lucide-react";
 import { Card } from "../ui/card";
-import { Button } from "../ui/button";
 import { Badge } from "../ui/badge";
 
 interface ServicesProps {
@@ -44,7 +43,7 @@ export default function Services({ onNavigate }: ServicesProps) {
       icon: <MessageSquare className="w-6 h-6" />,
       category: "Core Training",
       title: "Soft Skills Training",
-      duration: "8-12 weeks",
+      duration: "Customized",
       format: "In-person & Online",
       description:
         "Comprehensive soft skills development programs that enhance communication, leadership, and teamwork.",
@@ -58,7 +57,7 @@ export default function Services({ onNavigate }: ServicesProps) {
       duration: "Customized",
       format: "Comprehensive",
       description:
-        "Support your organization's global expansion with cross-cultural training and international business strategies.",
+        "Support your organization's global expansion with right resource.",
 
       popular: false,
     },
@@ -66,7 +65,7 @@ export default function Services({ onNavigate }: ServicesProps) {
       icon: <Briefcase className="w-6 h-6" />,
       category: "Individual Development",
       title: "Career Coaching",
-      duration: "3-6 months",
+      duration: "Customized",
       format: "1-on-1 Sessions",
       description:
         "Personalized career guidance to help professionals achieve their career goals and maximize their potential.",
@@ -77,7 +76,7 @@ export default function Services({ onNavigate }: ServicesProps) {
       icon: <GraduationCap className="w-6 h-6" />,
       category: "Student Success",
       title: "Early Career Guidance",
-      duration: "4-8 weeks",
+      duration: "Customized",
       format: "Group & Individual",
       description:
         "Comprehensive support for students and recent graduates transitioning into the professional world.",
@@ -105,8 +104,7 @@ export default function Services({ onNavigate }: ServicesProps) {
     <div className="min-h-screen pt-16 md:pt-20 bg-white">
       {/* Hero Section */}
       <section className="relative py-20 md:py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        <div className="absolute inset-0 bg-linear-to-br from-[#2D5BFF]/5 via-white to-[#2D5BFF]/5"></div>
-        <div className="max-w-7xl mx-auto relative">
+        <div className="max-w-7xl mx-auto relative">  
           <div className="text-center">
             <h1 className="text-4xl font-semibold md:text-5xl lg:text-7xl text-gray-900 mb-6">
               Our <span className="text-[#2D5BFF]">Services</span>
@@ -126,13 +124,8 @@ export default function Services({ onNavigate }: ServicesProps) {
             {services.map((service, index) => (
               <Card
                 key={index}
-                className="group p-5 bg-white rounded-2xl border-none shadow-lg hover:shadow-blue-300 hover:-translate-y-2 transition-all duration-300 relative overflow-hidden flex flex-col"
+                className="group p-5 bg-white rounded-2xl  shadow-md border-gray-100 hover:border-[#2D5BFF] hover:-translate-y-2 transition-all duration-300 cursor-pointer  hover:shadow-blue-300"
               >
-                {service.popular && (
-                  <Badge className="absolute top-4 right-4 text-xs bg-[#2D5BFF] text-white px-3 py-1 rounded-full">
-                    Popular
-                  </Badge>
-                )}
                 <div className="bg-[#2D5BFF]/10 w-14 h-10 rounded-xl flex items-center justify-center text-[#2D5BFF] mb-4">
                   {service.icon}
                 </div>

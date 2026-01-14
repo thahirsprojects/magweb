@@ -48,8 +48,8 @@ export default function Footer({ onNavigate }: FooterProps) {
             <h4 className="text-white text-lg font-semibold mb-4">Contact Us</h4>
             <ul className="space-y-3 text-sm">
               <li className="flex items-center gap-2">
-                <Mail size={16} className="text-[#2D5BFF]" />
-                <span>info@magresourcerevolution .com</span>
+                <Mail size={20} className="text-[#2D5BFF]" />
+                <span>info@magresourcerevolution.com</span>
               </li>
               <li className="flex items-center gap-2">
                 <Phone size={16} className="text-[#2D5BFF]" />

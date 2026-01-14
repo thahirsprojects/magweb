@@ -1,20 +1,20 @@
-import { useState } from 'react';
-import { Mail, Phone, Send, Clock, MapPin } from 'lucide-react';
-import { Button } from '../ui/button';
-import { Input } from '../ui/input';
-import { Textarea } from '../ui/textarea';
-import { Card } from '../ui/card';
+import { useState } from "react";
+import { Mail, Phone, Send, Clock, MapPin } from "lucide-react";
+import { Button } from "../ui/button";
+import { Input } from "../ui/input";
+import { Textarea } from "../ui/textarea";
+import { Card } from "../ui/card";
 
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export default function Contact() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    organization: '',
-    phone: '',
-    message: '',
+    name: "",
+    email: "",
+    organization: "",
+    phone: "",
+    message: "",
   });
 const [emailError, setEmailError] = useState('');
 const [checkingEmail, setCheckingEmail] = useState(false);
@@ -24,33 +24,29 @@ const [checkingEmail, setCheckingEmail] = useState(false);
   ) => {
     const { name, value } = e.target;
 
-    if (name === 'phone') {
-      // Allow only digits for phone number
-      const digitsOnly = value.replace(/\D/g, '');
+    if (name === "phone") {
+      const digitsOnly = value.replace(/\D/g, "");
       setFormData({
         ...formData,
         [name]: digitsOnly,
       });
-    } else if (name === 'name' || name === 'organization') {
-      // Allow only alphabets and spaces
-      const onlyAlphabets = value.replace(/[^a-zA-Z\s]/g, '');
+    } else if (name === "name" || name === "organization") {
+      const onlyAlphabets = value.replace(/[^a-zA-Z\s]/g, "");
 
-      // Capitalize first letter of each word
       const capitalized = onlyAlphabets
-        .split(' ')
+        .split(" ")
         .map((word) =>
           word.length > 0
             ? word[0].toUpperCase() + word.slice(1).toLowerCase()
-            : ''
+            : ""
         )
-        .join(' ');
+        .join(" ");
 
       setFormData({
         ...formData,
         [name]: capitalized,
       });
     } else {
-      // For other fields like email or message, allow all input
       setFormData({
         ...formData,
         [name]: value,
@@ -95,22 +91,18 @@ const handleEmailBlur = async () => {
   }
     const { name, email, organization, phone, message } = formData;
 
-    // Receiver email
-    const toEmail = 'thahirsprojects@gmail.com';
-
-    // Email subject
+    const toEmail = "thahirsprojects@gmail.com";
     const subject = `Contact Message from ${name}`;
 
-    // Email body format
     const body = `Hello MAG Resource Revolution Team,
 
-I am ${name}${organization ? ` from ${organization}` : ''}.
+I am ${name}${organization ? ` from ${organization}` : ""}.
 
 ${message}
 
 You may contact me at:
 Email: ${email}
-Phone: ${phone || 'N/A'}
+Phone: ${phone || "N/A"}
 
 Regards,
 ${name}
@@ -120,73 +112,82 @@ ${name}
 ----------------------------------------------------------------------------------------`;
 
     /* -------------------------------------------------
-     TRY OPENING GMAIL WEB FIRST (BEST EXPERIENCE)
-     ------------------------------------------------- */
+   TRY OPENING GMAIL WEB FIRST (BEST EXPERIENCE)
+   ------------------------------------------------- */
     const gmailURL = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
       toEmail
     )}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
-    // Try opening Gmail in a new tab
-    const gmailWindow = window.open(gmailURL, '_blank');
+    // MOBILE FIX 
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 
-    /* -------------------------------------------------
-     FALLBACK: IF GMAIL IS BLOCKED OR NOT AVAILABLE
-     ------------------------------------------------- */
-    if (!gmailWindow) {
+    if (isMobile) {
+      // Mobile → open mail app
       const mailtoURL = `mailto:${toEmail}?subject=${encodeURIComponent(
         subject
       )}&body=${encodeURIComponent(body)}`;
 
       window.location.href = mailtoURL;
+    } else {
+      // 💻 Desktop → Gmail web (your original logic)
+      const gmailWindow = window.open(gmailURL, "_blank");
+
+      if (!gmailWindow) {
+        const mailtoURL = `mailto:${toEmail}?subject=${encodeURIComponent(
+          subject
+        )}&body=${encodeURIComponent(body)}`;
+
+        window.location.href = mailtoURL;
+      }
     }
 
     setTimeout(() => {
       setFormData({
-        name: '',
-        email: '',
-        organization: '',
-        phone: '',
-        message: '',
+        name: "",
+        email: "",
+        organization: "",
+        phone: "",
+        message: "",
       });
     }, 500);
   };
 
   const contactInfo = [
     {
-      icon: <Mail className='w-6 h-6' />,
-      title: 'Email Us',
-      detail: 'info@magresourcerevolution.com',
-      link: 'mailto:info@magresourcerevolution.com',
+      icon: <Mail className="w-6 h-6" />,
+      title: "Email Us",
+      detail: "info@magresourcerevolution.com",
+      link: "mailto:info@magresourcerevolution.com",
     },
     {
-      icon: <Phone className='w-6 h-6' />,
-      title: 'Call Us',
-      detail: '+91 78680 23276',
-      link: 'tel:+919876543210',
+      icon: <Phone className="w-6 h-6" />,
+      title: "Call Us",
+      detail: "+91 78680 23276",
+      link: "tel:+919876543210",
     },
     {
-      icon: <Clock className='w-6 h-6' />,
-      title: 'Business Hours',
-      detail: 'Monday - Friday 8am - 6pm  Saturday 8am - 2pm',
-      link: '#',
+      icon: <Clock className="w-6 h-6" />,
+      title: "Business Hours",
+      detail: "Monday - Friday 8am - 6pm  Saturday 8am - 2pm",
+      link: "#",
     },
     {
-      icon: <MapPin className='w-6 h-6' />,
-      title: 'Visit Us',
-      detail: 'VQ7P+WPQ, Thavalakuppam, Puducherry 605007, India',
-      link: 'https://maps.app.goo.gl/gjDg7A2Mk7SP9Qhc8',
+      icon: <MapPin className="w-6 h-6" />,
+      title: "Visit Us",
+      detail: "VQ7P+WPQ, Thavalakuppam, Puducherry 605007, India",
+      link: "https://maps.app.goo.gl/gjDg7A2Mk7SP9Qhc8",
     },
   ];
 
   return (
-    <div className='min-h-screen pt-16 md:pt-20'>
+    <div className="min-h-screen pt-16 md:pt-20">
       {/* Hero Section */}
-      <section className='py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-linear-to-br from-[#2D5BFF]/5 to-white'>
-        <div className='max-w-7xl mx-auto text-center'>
-          <h1 className='text-4xl font-semibold md:text-5xl lg:text-6xl text-gray-900 mb-6'>
-            Let’s get <span className='text-[#2D5BFF]'>connected</span>
+      <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-linear-to-br from-[#2D5BFF]/5 to-white">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl font-semibold md:text-5xl lg:text-6xl text-gray-900 mb-6">
+            Let’s get <span className="text-[#2D5BFF]">connected</span>
           </h1>
-          <p className='text-lg md:text-xl text-gray-600 max-w-3xl mx-auto'>
+          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
             We’re here to help and respond quickly to your inquiries. Reach out
             anytime for support, collaboration opportunities, or tailored
             solutions.
@@ -195,21 +196,21 @@ ${name}
       </section>
 
       {/* Contact Info Cards */}
-      <section className='py-16 px-4 sm:px-6 lg:px-8'>
-        <div className='max-w-7xl mx-auto'>
-          <div className='grid md:grid-cols-2 gap-6 max-w-4xl mx-auto'>
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {contactInfo.map((info, index) => (
               <Card
                 key={index}
-                className='p-6 bg-white rounded-2xl border-gray-100 hover:border-[#2D5BFF] shadow-lg hover:-translate-y-2 transition-all duration-300 hover:shadow-blue-300'
+                className="p-6 bg-white rounded-2xl border-gray-100 hover:border-[#2D5BFF] shadow-lg hover:-translate-y-2 transition-all duration-300 hover:shadow-blue-300"
               >
-                <div className='bg-[#2D5BFF]/10 w-14 h-14 rounded-xl flex items-center justify-center text-[#2D5BFF] mb-4'>
+                <div className="bg-[#2D5BFF]/10 w-14 h-14 rounded-xl flex items-center justify-center text-[#2D5BFF] mb-4">
                   {info.icon}
                 </div>
-                <h3 className='text-lg text-gray-900 mb-2'>{info.title}</h3>
+                <h3 className="text-lg text-gray-900 mb-2">{info.title}</h3>
                 <a
                   href={info.link}
-                  className='text-gray-600 hover:text-[#2D5BFF] transition-colors duration-300'
+                  className="text-gray-600 hover:text-[#2D5BFF] transition-colors duration-300"
                 >
                   {info.detail}
                 </a>
@@ -220,54 +221,53 @@ ${name}
       </section>
 
       {/* Contact Form & Map */}
-      <section className='py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-gray-50'>
-        <div className='max-w-7xl mx-auto'>
-          <div className='grid lg:grid-cols-2 gap-12'>
+      <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <div>
-              <h2 className='text-3xl md:text-4xl text-gray-900 mb-4'>
+              <h2 className="text-3xl md:text-4xl text-gray-900 mb-4">
                 Send Us a Message
               </h2>
-              <p className='text-lg text-gray-600 mb-8'>
+              <p className="text-lg text-gray-600 mb-8">
                 Fill out the form below and we'll get back to you within 24
                 hours.
               </p>
-              <form onSubmit={handleSubmit} className='space-y-6'>
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label
-                    htmlFor='name'
-                    className='block text-sm mb-2 text-gray-700'
+                    htmlFor="name"
+                    className="block text-sm mb-2 text-gray-700"
                   >
                     Full Name *
                   </label>
                   <Input
-                    id='name'
-                    name='name'
-                    type='text'
+                    id="name"
+                    name="name"
+                    type="text"
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    className='w-full px-4 py-3 rounded-xl border-gray-300 focus:border-[#2D5BFF] focus:ring-[#2D5BFF]'
-                    placeholder='John Doe'
+                    className="w-full px-4 py-3 rounded-xl border-gray-300 focus:border-[#2D5BFF] focus:ring-[#2D5BFF]"
+                    placeholder="Your Name"
                   />
                 </div>
                 <div>
                   <label
-                    htmlFor='email'
-                    className='block text-sm mb-2 text-gray-700'
+                    htmlFor="email"
+                    className="block text-sm mb-2 text-gray-700"
                   >
                     Email Address *
                   </label>
                   <Input
-                    id='email'
-                    name='email'
-                    type='email'
+                    id="email"
+                    name="email"
+                    type="email"
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    onBlur={handleEmailBlur}
-                    className='w-full px-4 py-3 rounded-xl border-gray-300 focus:border-[#2D5BFF] focus:ring-[#2D5BFF]'
-                    placeholder='john@example.com'
+                    className="w-full px-4 py-3 rounded-xl border-gray-300 focus:border-[#2D5BFF] focus:ring-[#2D5BFF]"
+                    placeholder="name@example.com"
                   />
                   {checkingEmail && (
                  <p className='text-sm text-gray-500 mt-1'>Checking email...</p>
@@ -276,111 +276,112 @@ ${name}
                   {emailError && (
                   <p className='text-sm text-red-500 mt-1'>{emailError}</p>
                  )}
+                 
 
                 </div>
                 <div>
                   <label
-                    htmlFor='organization'
-                    className='block text-sm mb-2 text-gray-700'
+                    htmlFor="organization"
+                    className="block text-sm mb-2 text-gray-700"
                   >
                     Organization
                   </label>
                   <Input
-                    id='organization'
-                    name='organization'
-                    type='text'
+                    id="organization"
+                    name="organization"
+                    type="text"
                     value={formData.organization}
                     onChange={handleChange}
-                    className='w-full px-4 py-3 rounded-xl border-gray-300 focus:border-[#2D5BFF] focus:ring-[#2D5BFF]'
-                    placeholder='Your Company Name'
+                    className="w-full px-4 py-3 rounded-xl border-gray-300 focus:border-[#2D5BFF] focus:ring-[#2D5BFF]"
+                    placeholder="Your Company Name"
                   />
                 </div>
                 <div>
                   <label
-                    htmlFor='phone'
-                    className='block text-sm mb-2 text-gray-700'
+                    htmlFor="phone"
+                    className="block text-sm mb-2 text-gray-700"
                   >
                     Phone Number *
                   </label>
                   <Input
-                    id='phone'
-                    name='phone'
-                    type='tel'
+                    id="phone"
+                    name="phone"
+                    type="tel"
                     required
                     value={formData.phone}
                     onChange={handleChange}
-                    className='w-full px-4 py-3 rounded-xl border-gray-300 focus:border-[#2D5BFF] focus:ring-[#2D5BFF]'
-                    placeholder='+91 98765 43210'
+                    className="w-full px-4 py-3 rounded-xl border-gray-300 focus:border-[#2D5BFF] focus:ring-[#2D5BFF]"
+                    placeholder="+91 98765 43210"
                   />
                 </div>
                 <div>
                   <label
-                    htmlFor='message'
-                    className='block text-sm mb-2 text-gray-700'
+                    htmlFor="message"
+                    className="block text-sm mb-2 text-gray-700"
                   >
                     Message *
                   </label>
                   <Textarea
-                    id='message'
-                    name='message'
+                    id="message"
+                    name="message"
                     required
                     value={formData.message}
                     onChange={handleChange}
                     rows={6}
                     maxLength={400} // Limit to 400 characters
-                    className='w-full px-4 py-3 rounded-xl border-gray-300 focus:border-[#2D5BFF] focus:ring-[#2D5BFF] resize-none'
-                    placeholder='Tell us about your training needs...'
+                    className="w-full px-4 py-3 rounded-xl border-gray-300 focus:border-[#2D5BFF] focus:ring-[#2D5BFF] resize-none"
+                    placeholder="Tell us about your training needs..."
                   />
-                  <p className='text-sm text-gray-500 mt-1'>
+                  <p className="text-sm text-gray-500 mt-1">
                     {formData.message.length} / 400 characters
                   </p>
                 </div>
                 <Button
-                  type='submit'
-                  className='w-full bg-[#2D5BFF] hover:bg-[#1E40CC] text-white py-6 rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 group'
+                  type="submit"
+                  className="w-full bg-[#2D5BFF] hover:bg-[#1E40CC] text-white py-6 rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 group"
                 >
                   Send Message
-                  <Send className='ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform' />
+                  <Send className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </form>
             </div>
 
             {/* Map / Additional Info */}
-            <div className='space-y-8'>
-              <Card className='p-8 bg-white rounded-3xl border-gray-100 hover:border-[#2D5BFF] shadow-lg'>
-                <h3 className='text-2xl text-gray-900 mb-4'>Why Choose Us?</h3>
-                <ul className='space-y-4 text-gray-600'>
-                  <li className='flex items-start gap-3'>
-                    <div className='w-2 h-2 bg-[#2D5BFF] rounded-full mt-2'></div>
+            <div className="space-y-8">
+              <Card className="p-8 bg-white rounded-3xl border-gray-100 hover:border-[#2D5BFF] shadow-lg">
+                <h3 className="text-2xl text-gray-900 mb-4">Why Choose Us?</h3>
+                <ul className="space-y-4 text-gray-600">
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-[#2D5BFF] rounded-full mt-2"></div>
                     <span>
                       Tailored recommendations for training, upskilling, and
                       workforce optimization
                     </span>
                   </li>
-                  <li className='flex items-start gap-3'>
-                    <div className='w-2 h-2 bg-[#2D5BFF] rounded-full mt-2'></div>
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-[#2D5BFF] rounded-full mt-2"></div>
                     <span>
                       Custom solutions for institutional training and
                       organizational talent development
                     </span>
                   </li>
-                  <li className='flex items-start gap-3'>
-                    <div className='w-2 h-2 bg-[#2D5BFF] rounded-full mt-2'></div>
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-[#2D5BFF] rounded-full mt-2"></div>
                     <span>
                       Direct consultation with industry experts in learning and
                       workforce <br />
                       strategy
                     </span>
                   </li>
-                  <li className='flex items-start gap-3'>
-                    <div className='w-2 h-2 bg-[#2D5BFF] rounded-full mt-2'></div>
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-[#2D5BFF] rounded-full mt-2"></div>
                     <span>
                       Access to our workforce placement and client-matching
                       services
                     </span>
                   </li>
-                  <li className='flex items-start gap-3'>
-                    <div className='w-2 h-2 bg-[#2D5BFF] rounded-full mt-2'></div>
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-[#2D5BFF] rounded-full mt-2"></div>
                     <span>
                       Transparent pricing models and long-term collaboration
                       opportunities
@@ -390,9 +391,9 @@ ${name}
               </Card>
 
               {/* FAQ Card */}
-              <Card className='p-8 bg-linear-to-br from-[#2D5BFF] to-[#1E40CC] text-white rounded-3xl border-none shadow-lg'>
-                <h3 className='text-2xl mb-4'>Quick Response</h3>
-                <p className='text-lg opacity-90'>
+              <Card className="p-8 bg-linear-to-br from-[#2D5BFF] to-[#1E40CC] text-white rounded-3xl border-none shadow-lg">
+                <h3 className="text-2xl mb-4">Quick Response</h3>
+                <p className="text-lg opacity-90">
                   Responses are usually provided within 24 hours on business
                   days. For urgent concerns, please contact our team directly.
                 </p>

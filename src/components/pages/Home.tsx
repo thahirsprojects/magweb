@@ -89,7 +89,7 @@ export default function Home({ onNavigate }: HomeProps) {
                   </div>
                   <div>
                     <p className="text-sm text-gray-600">Trusted by</p>
-                    <p className="text-xl text-gray-900">500+ Organizations</p>
+                    <p className="text-xl text-gray-900">50+ Organizations</p>
                   </div>
                 </div>
               </div>

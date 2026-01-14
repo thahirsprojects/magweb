@@ -40,7 +40,7 @@ export default function About() {
     },
     {
       name: 'Aravind Murugan',
-      role: 'Director / co founder',
+      role: 'Director / Co Founder',
       image: sirPic,
       bio:
         'Aravind is an Engineer with over a decade of Technical and Non -Technical head-hunting Global Resource across US, Canada, Australian and Pan-Asian market. He has been the Dealmaker for most of the Hi-Tech and Fin-Tech Clients he worked with globally. He converts the demanding clients to a workable prospect. He carries a strong Client and Vendor management expertise. Closing the Deals and Stakeholder Management are his core strength.',
@@ -68,13 +68,13 @@ export default function About() {
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl text-gray-900 mb-6">Our Story</h2>
+              <h2 className="text-3xl md:text-4xl text-gray-900 mb-6">About Us</h2>
               <div className="space-y-4 text-gray-600">
                 <p>
-                  Founded in 2010, MAGRR emerged from a simple yet powerful vision: to bridge the gap between academic knowledge and essential soft skills required in the professional world.
+                  MAGRR emerged from a simple yet powerful vision: to bridge the gap between academic knowledge and essential soft skills required in the professional world.
                 </p>
                 <p>
-                  Over the past 15 years, we've grown from a small training consultancy to a leading provider of soft skills development programs, serving over 500 organizations and impacting more than 50,000 professionals across industries.
+                  Mag Resource Revolution is a leading provider of Human Resource Training, Talent Acquisition, and Placement Services. We bridge the gap between talent and opportunity by empowering students, institutions, and organizations through high-quality training, global recruitment expertise, and industry-specific hiring solutions.
                 </p>
                 <p>
                   Our approach combines proven methodologies with innovative techniques, ensuring that every participant gains practical skills they can immediately apply in their professional lives.
