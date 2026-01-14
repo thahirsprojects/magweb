@@ -129,7 +129,7 @@ ${name}
 
       window.location.href = mailtoURL;
     } else {
-      // 💻 Desktop → Gmail web (your original logic)
+      // Desktop → Gmail web (your original logic)
       const gmailWindow = window.open(gmailURL, "_blank");
 
       if (!gmailWindow) {
@@ -196,7 +196,7 @@ ${name}
       </section>
 
       {/* Contact Info Cards */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      {/* <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {contactInfo.map((info, index) => (
@@ -218,7 +218,7 @@ ${name}
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Contact Form & Map */}
       <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">

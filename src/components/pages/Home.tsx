@@ -103,7 +103,7 @@ export default function Home({ onNavigate }: HomeProps) {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl text-gray-900 mb-4">
-              Why Choose <span className="text-[#2D5BFF]">MAGRR</span>?
+              Why Choose <span className="text-[#2D5BFF]">Mag Resouce Revolution</span>?
             </h2>
             <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
               We deliver exceptional training experiences that create lasting impact.
@@ -133,7 +133,7 @@ export default function Home({ onNavigate }: HomeProps) {
             Ready to Transform Your Team?
           </h2>
           <p className="text-lg md:text-xl mb-8 opacity-90">
-            Join hundreds of organizations that trust MAGRR for their soft skills training needs.
+            Join hundreds of organizations that trust Mag Resouce Revolution for their soft skills training needs.
           </p>
           <Button
             onClick={() => onNavigate('Contact')}
@@ -176,10 +176,9 @@ export default function Home({ onNavigate }: HomeProps) {
             <a
               href="https://www.instagram.com/mag_resource_revolution/?igsh=aXJwNnZreDgxY2Rv&utm_source=qr#"
               target="_blank"
-              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-[#2D5BFF] hover:text-[#1E40CC] transition-colors duration-300"
             >
-              <span className="text-lg">@mag_training</span>
+              <span className="text-lg">mag_resource_revolution</span>
               <ArrowRight className="w-5 h-5" />
             </a>
           </div>
